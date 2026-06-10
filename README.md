@@ -1,7 +1,7 @@
 CubeOS
 A web-based "operating system" that also acts like a portfolio.
 
-![Simple webpage I made](./readmeImage2.png)
+![Simple webpage I made](./readmeImage3.png)
 
 ## [Click Here for Live Demo](https://ethancubes.neocities.org/)
 
