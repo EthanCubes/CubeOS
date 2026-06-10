@@ -58,3 +58,19 @@ function dragElement(element) {
         document.onmousemove = null;
     }
 }
+
+var welcomeScreen = document.querySelector("#intro");
+
+function closeWindow(element) {
+    element.style.display = "none";
+}
+
+function openWindow(element) { // Haha gd reference
+    element.style.display = "flex";
+}
+
+var introWindowClose = document.querySelector("#introClose");
+var introWindowOpen = document.querySelector("#introOpen");
+
+introWindowClose.addEventListener("click", function() {closeWindow(welcomeScreen);})
+introWindowOpen.addEventListener("click", function() {openWindow(welcomeScreen);})
