@@ -46,6 +46,8 @@ h1 {
     background-color: red;
     cursor: pointer;
     padding: 2px;
+    padding-left: 8px;
+    padding-right:8px;
     border-radius: 16px;
 }
 
