@@ -15,16 +15,19 @@ nav {
     border: solid; 
     width: 500px; 
     border-radius: 16px; 
-    padding: 20px;
     background-color: 
     darkslateblue;
 }
 
+.innerWindow {
+    margin: 16px;
+}
+
 #introheader {
     display: flex;
-    justify-content: space-between;
     background-color: grey;
-    padding: 8px;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 h1 {
