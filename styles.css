@@ -29,6 +29,7 @@ nav {
 #introheader {
     display: flex;
     background-color: grey;
+    padding-left: 10px;
     padding: 5px;
     border-radius: 20px;
 }
