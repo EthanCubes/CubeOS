@@ -12,11 +12,17 @@ A web-based "operating system" that also acts like a portfolio.
 - Intro window can be dragged around.
 
 ## How it works
-For the basic structure, HTML and CSS were used (of course)
 
-For the time, JavaScript was used to update the page every second and show the current time.
+### Basic Structure and Layout
+- HTML
+- CSS
 
-For the window toggle, JavaScript was used the change the CSS display of the intro window from flex to none and vice versa.
+### Live time display
+- JavaScript was used to update the HTML of the page every second to change the time.
+
+### Window toggle
+1. When the close window button is pressed, the JavaScript changes the display of the window to none, therefore hiding the page.
+2. WHen the open window (holy gd reference) button is pressed, JavaScript changes the display of the window back to flex, showing the page again.
 
 ### Draggable Window
 1. JavaScript checks if there's a specific "header" element (in the case of the intro window, the top bar). If one's present, it only drags there. Otherwise, you can drag from anywhere.
