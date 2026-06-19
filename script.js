@@ -1,3 +1,6 @@
+var introWindowStatus = "open";
+
+
 setInterval(function () {
     var currentTime = new Date().toLocaleString();
     var timeText = document.querySelector("#time");
@@ -66,10 +69,15 @@ var welcomeScreen = document.querySelector("#intro");
 
 function closeWindow(element) {
     element.style.display = "none";
+    introWindowStatus = "closed";
 }
 
 function openWindow(element) { // Haha gd reference
     element.style.display = "flex";
+    if (introWindowStatus === "open") {
+        alert("The window's open already!!!")
+    }
+    introWindowStatus = "closed";
 }
 
 var introWindowClose = document.querySelector("#introClose");
