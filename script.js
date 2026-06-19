@@ -4,6 +4,8 @@ setInterval(function () {
     timeText.innerHTML = currentTime;
 }, 1000)
 
+
+// Pasted code (the tutorial actually said that I should paste this code)
 // Make the DIV element draggable:
 dragElement(document.getElementById("intro"));
 
@@ -58,6 +60,7 @@ function dragElement(element) {
         document.onmousemove = null;
     }
 }
+// Pasted code ends
 
 var welcomeScreen = document.querySelector("#intro");
 
