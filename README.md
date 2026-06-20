@@ -1,4 +1,4 @@
-CubeOS
+# CubeOS
 A web-based "operating system" that also acts like a portfolio.
 
 ![Simple webpage I made](./assets/devlog/Screenshot%202026-06-18%20at%2021.07.25.png)
