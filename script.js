@@ -77,7 +77,7 @@ function openWindow(element) { // Haha gd reference
     if (introWindowStatus === "open") {
         alert("The window's open already!!!")
     }
-    introWindowStatus = "closed";
+    introWindowStatus = "open";
 }
 
 var introWindowClose = document.querySelector("#introClose");
