@@ -36,6 +36,11 @@ A web-based "operating system" that also acts like a portfolio.
 3. The JavaScript function reads the text inside the search bar
 4. The JavaScript function directs the user to the DuckDuckGo search results (because I don't like Google)
 
+### Layering
+1. A variable to represent the highest layer was set when the program is first loaded.
+2. Every time a window is started or loaded, it the variable is changed by 1, and the window in question is set to the highest layer, therefox moving it to the top.
+- Built using the zIndex CSS value.
+
 ## Credits
 - AI was used for debugging and for research.
 - The WebOS tutorial included with the WebOS mission, created by SerenityUX, single-handely carried this entire project. (I did have my own ideas but mostly the layout came from the tutorial)
