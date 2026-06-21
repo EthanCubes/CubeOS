@@ -116,3 +116,17 @@ function handleIconTap(element, open) {
 
 var gdWindowOpen = document.querySelector("#gdOpen");
 gdWindowOpen.addEventListener("click", function() {handleIconTap(gdWindowOpen, geometryDash)});
+
+
+var achievementTextOn = false;
+
+function achievements() {
+    var element = document.getElementById("achievementText");
+    if (achievementTextOn === true) {
+        achievementTextOn = false;
+        element.style.display = "none";
+    } else {
+        achievementTextOn = true;
+        element.style.display = "block";
+    }
+}
