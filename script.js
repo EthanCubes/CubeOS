@@ -67,7 +67,7 @@ function dragElement(element) {
 
 
 // Window toggle
-var welcomeScreen = document.querySelector("#intro");
+var intro = document.querySelector("#intro");
 
 
 // WIndow toggle
@@ -82,8 +82,8 @@ function openWindow(element) { // Haha gd reference
 var introWindowClose = document.querySelector("#introClose");
 var introWindowOpen = document.querySelector("#introOpen");
 
-introWindowClose.addEventListener("click", function() {closeWindow(welcomeScreen);});
-introWindowOpen.addEventListener("click", function() {openWindow(welcomeScreen);});
+introWindowClose.addEventListener("click", function() {closeWindow(intro);});
+introWindowOpen.addEventListener("click", function() {openWindow(intro); bringToFront(intro);});
 
 // Closes the GD Window
 var geometryDash = document.querySelector("#geometryDash")
@@ -109,6 +109,7 @@ function handleIconTap(element, open) {
     if (element.classList.contains("selected")) {
         deselectIcon(element);
         openWindow(open);
+        bringToFront(open);
     }
     else {
         selectIcon(element);
@@ -121,10 +122,10 @@ gdWindowOpen.addEventListener("click", function() {handleIconTap(gdWindowOpen, g
 var browser = document.querySelector("#browser");
 
 var browserWindowClose = document.querySelector("#browserClose");
-browserWindowClose.addEventListener("click", function() { closeWindow(browser);})
+browserWindowClose.addEventListener("click", function() { closeWindow(browser);});
 
 var browserWindowOpen = document.querySelector("#browserOpen");
-browserWindowOpen.addEventListener("click", function() {handleIconTap(browserWindowOpen, browser)});
+browserWindowOpen.addEventListener("click", function() {handleIconTap(browserWindowOpen, browser);});
 
 var achievementTextOn = false;
 
@@ -145,4 +146,15 @@ function search() {
     searchQuery = searchBar.value;
     let link = linkTemp + searchQuery;
     window.open(link);
+}
+
+browser.addEventListener("click", function() {bringToFront(browser);});
+geometryDash.addEventListener("click", function() {bringToFront(geometryDash);});
+intro.addEventListener("click", function() {bringToFront(intro);});
+
+let highestZ = 1;
+
+function bringToFront(element) {
+    highestZ = highestZ + 1;
+    element.style.zIndex = highestZ;
 }
