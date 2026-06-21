@@ -9,7 +9,8 @@ setInterval(function () {
 // Pasted code (the tutorial actually said that I should paste this code)
 // Make the DIV element draggable:
 dragElement(document.getElementById("intro"));
-dragElement(document.getElementById("geometryDash"))
+dragElement(document.getElementById("geometryDash"));
+dragElement(document.getElementById("browser"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -117,6 +118,13 @@ function handleIconTap(element, open) {
 var gdWindowOpen = document.querySelector("#gdOpen");
 gdWindowOpen.addEventListener("click", function() {handleIconTap(gdWindowOpen, geometryDash)});
 
+var browser = document.querySelector("#browser");
+
+var browserWindowClose = document.querySelector("#browserClose");
+browserWindowClose.addEventListener("click", function() { closeWindow(browser);})
+
+var browserWindowOpen = document.querySelector("#browserOpen");
+browserWindowOpen.addEventListener("click", function() {handleIconTap(browserWindowOpen, browser)});
 
 var achievementTextOn = false;
 
