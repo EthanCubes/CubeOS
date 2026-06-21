@@ -33,3 +33,4 @@ A web-based "operating system" that also acts like a portfolio.
 - AI was used for debugging and for research.
 - The WebOS tutorial included with the WebOS mission, created by SerenityUX, single-handely carried this entire project. (I did have my own ideas but mostly the layout came from the tutorial)
 - I got the Minecraft sunset image from [Vanilla Tweaks](https://vanillatweaks.net)'s 1.18 Panorama texture pack. 
+- Some Geometry Dash textures I got from the [GD Community Hub Assets GitHub Repository](https://github.com/GD-Community-Hub/Assets)
