@@ -1,6 +1,4 @@
-var introWindowStatus = "open";
-
-
+// Time
 setInterval(function () {
     var currentTime = new Date().toLocaleString();
     var timeText = document.querySelector("#time");
@@ -11,6 +9,7 @@ setInterval(function () {
 // Pasted code (the tutorial actually said that I should paste this code)
 // Make the DIV element draggable:
 dragElement(document.getElementById("intro"));
+dragElement(document.getElementById("geometryDash"))
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -65,23 +64,55 @@ function dragElement(element) {
 }
 // Pasted code ends
 
+
+// Window toggle
 var welcomeScreen = document.querySelector("#intro");
 
+
+// WIndow toggle
 function closeWindow(element) {
     element.style.display = "none";
-    introWindowStatus = "closed";
 }
 
 function openWindow(element) { // Haha gd reference
     element.style.display = "flex";
-    if (introWindowStatus === "open") {
-        alert("The window's open already!!!")
-    }
-    introWindowStatus = "open";
 }
 
 var introWindowClose = document.querySelector("#introClose");
 var introWindowOpen = document.querySelector("#introOpen");
 
-introWindowClose.addEventListener("click", function() {closeWindow(welcomeScreen);})
-introWindowOpen.addEventListener("click", function() {openWindow(welcomeScreen);})
+introWindowClose.addEventListener("click", function() {closeWindow(welcomeScreen);});
+introWindowOpen.addEventListener("click", function() {openWindow(welcomeScreen);});
+
+// Closes the GD Window
+var geometryDash = document.querySelector("#geometryDash")
+
+var gdWindowClose = document.querySelector("#gdClose");
+gdWindowClose.addEventListener("click", function() {closeWindow(geometryDash);});
+
+// App selection and open
+
+var selectedIcon = undefined;
+
+function selectIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element;
+}
+
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    selectedIcon = undefined;
+}
+
+function handleIconTap(element, open) {
+    if (element.classList.contains("selected")) {
+        deselectIcon(element);
+        openWindow(open);
+    }
+    else {
+        selectIcon(element);
+    }
+}
+
+var gdWindowOpen = document.querySelector("#gdOpen");
+gdWindowOpen.addEventListener("click", function() {handleIconTap(gdWindowOpen, geometryDash)});
