@@ -1,15 +1,16 @@
 # CubeOS
 A web-based "operating system" that also acts like a portfolio.
 
-![Simple webpage I made](./screenshots/Screenshot%202026-06-20%20at%2021.07.55.png)
+![Simple webpage I made](./screenshots/Screenshot%202026-06-21%20at%2014.28.53.png)
 
 ## [Click Here for Live Demo](https://ethancubes.neocities.org/)
 
 ## Features
-- Shows information (obviously)
+- Shows information about me (obviously) (not a lot)
 - Displays the time.
-- Intro window can be opened and closed.
-- Intro window can be dragged around.
+- Windows can be opened and closed.
+- Windows can be dragged around.
+- Option to search the internet (opens in a new tab)
 
 ## How it works
 
@@ -28,6 +29,12 @@ A web-based "operating system" that also acts like a portfolio.
 1. JavaScript checks if there's a specific "header" element (in the case of the intro window, the top bar). If one's present, it only drags there. Otherwise, you can drag from anywhere.
 2. When the mouse starts dragging the window, JavaScript uses the start postion (haha gd reference) of the mouse and the current position to calculate where to move the window.
 3. When the mouse releases, the window stops following the mouse and sets the "initial position" value to it's current position.
+
+### Search
+1. User enters search query into the search bar
+2. User presses the "search" button, which triggers a JavaScript function
+3. The JavaScript function reads the text inside the search bar
+4. The JavaScript function directs the user to the DuckDuckGo search results (because I don't like Google)
 
 ## Credits
 - AI was used for debugging and for research.
