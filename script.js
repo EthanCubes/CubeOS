@@ -138,3 +138,11 @@ function achievements() {
         element.style.display = "block";
     }
 }
+
+function search() {
+    let linkTemp = "https://duckduckgo.com/?q=";
+    var searchBar = document.querySelector("#searchBar");
+    searchQuery = searchBar.value;
+    let link = linkTemp + searchQuery;
+    window.open(link);
+}
