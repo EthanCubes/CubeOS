@@ -45,7 +45,7 @@ h1 {
     object-fit: cover;
 }
 
-#introClose, #introOpen {
+#introClose, #introOpen, #gdClose, #gdOpen {
     cursor: pointer;
 }
 
@@ -93,4 +93,8 @@ body {
 
 .selected {
     opacity: 0.5
+}
+
+#gdBack {
+    background-image: url("")
 }
